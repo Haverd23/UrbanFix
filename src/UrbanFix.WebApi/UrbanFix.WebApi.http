@@ -1,0 +1,6 @@
+@UrbanFix.WebApi_HostAddress = http://localhost:5110
+
+GET {{UrbanFix.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

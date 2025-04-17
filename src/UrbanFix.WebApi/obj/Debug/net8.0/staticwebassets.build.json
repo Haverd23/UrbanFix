@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "S4TIV69M/JJocfRM5wQ7VYryNHZ323iB0COK0zySxM4=",
+  "Source": "UrbanFix.WebApi",
+  "BasePath": "_content/UrbanFix.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

@@ -1,0 +1,230 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\alves\\Desktop\\UrbanFix\\UrbanFix\\src\\UrbanFix.Data\\UrbanFix.Data.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\alves\\Desktop\\UrbanFix\\UrbanFix\\src\\UrbanFix.Core\\UrbanFix.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\alves\\Desktop\\UrbanFix\\UrbanFix\\src\\UrbanFix.Core\\UrbanFix.Core.csproj",
+        "projectName": "UrbanFix.Core",
+        "projectPath": "C:\\Users\\alves\\Desktop\\UrbanFix\\UrbanFix\\src\\UrbanFix.Core\\UrbanFix.Core.csproj",
+        "packagesPath": "C:\\Users\\alves\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alves\\Desktop\\UrbanFix\\UrbanFix\\src\\UrbanFix.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\alves\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\alves\\Desktop\\UrbanFix\\UrbanFix\\src\\UrbanFix.Data\\UrbanFix.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\alves\\Desktop\\UrbanFix\\UrbanFix\\src\\UrbanFix.Data\\UrbanFix.Data.csproj",
+        "projectName": "UrbanFix.Data",
+        "projectPath": "C:\\Users\\alves\\Desktop\\UrbanFix\\UrbanFix\\src\\UrbanFix.Data\\UrbanFix.Data.csproj",
+        "packagesPath": "C:\\Users\\alves\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alves\\Desktop\\UrbanFix\\UrbanFix\\src\\UrbanFix.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\alves\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\alves\\Desktop\\UrbanFix\\UrbanFix\\src\\UrbanFix.Core\\UrbanFix.Core.csproj": {
+                "projectPath": "C:\\Users\\alves\\Desktop\\UrbanFix\\UrbanFix\\src\\UrbanFix.Core\\UrbanFix.Core.csproj"
+              },
+              "C:\\Users\\alves\\Desktop\\UrbanFix\\UrbanFix\\src\\UrbanFix.Domain\\UrbanFix.Domain.csproj": {
+                "projectPath": "C:\\Users\\alves\\Desktop\\UrbanFix\\UrbanFix\\src\\UrbanFix.Domain\\UrbanFix.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\alves\\Desktop\\UrbanFix\\UrbanFix\\src\\UrbanFix.Domain\\UrbanFix.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\alves\\Desktop\\UrbanFix\\UrbanFix\\src\\UrbanFix.Domain\\UrbanFix.Domain.csproj",
+        "projectName": "UrbanFix.Domain",
+        "projectPath": "C:\\Users\\alves\\Desktop\\UrbanFix\\UrbanFix\\src\\UrbanFix.Domain\\UrbanFix.Domain.csproj",
+        "packagesPath": "C:\\Users\\alves\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alves\\Desktop\\UrbanFix\\UrbanFix\\src\\UrbanFix.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\alves\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\alves\\Desktop\\UrbanFix\\UrbanFix\\src\\UrbanFix.Core\\UrbanFix.Core.csproj": {
+                "projectPath": "C:\\Users\\alves\\Desktop\\UrbanFix\\UrbanFix\\src\\UrbanFix.Core\\UrbanFix.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

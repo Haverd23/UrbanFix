@@ -1,0 +1,15 @@
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Domain\bin\Debug\net8.0\UrbanFix.Domain.deps.json
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Domain\bin\Debug\net8.0\UrbanFix.Domain.dll
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Domain\bin\Debug\net8.0\UrbanFix.Domain.pdb
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Domain\obj\Debug\net8.0\UrbanFix.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Domain\obj\Debug\net8.0\UrbanFix.Domain.AssemblyInfoInputs.cache
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Domain\obj\Debug\net8.0\UrbanFix.Domain.AssemblyInfo.cs
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Domain\obj\Debug\net8.0\UrbanFix.Domain.csproj.CoreCompileInputs.cache
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Domain\obj\Debug\net8.0\UrbanFix.Domain.dll
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Domain\obj\Debug\net8.0\refint\UrbanFix.Domain.dll
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Domain\obj\Debug\net8.0\UrbanFix.Domain.pdb
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Domain\obj\Debug\net8.0\ref\UrbanFix.Domain.dll
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Domain\bin\Debug\net8.0\UrbanFix.Core.dll
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Domain\bin\Debug\net8.0\UrbanFix.Core.pdb
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Domain\obj\Debug\net8.0\UrbanFix.Domain.csproj.AssemblyReference.cache
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Domain\obj\Debug\net8.0\UrbanFix.CCD3AF37.Up2Date

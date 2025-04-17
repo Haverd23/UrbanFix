@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "UrbanFix.Core/1.0.0": {
+        "runtime": {
+          "UrbanFix.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "UrbanFix.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

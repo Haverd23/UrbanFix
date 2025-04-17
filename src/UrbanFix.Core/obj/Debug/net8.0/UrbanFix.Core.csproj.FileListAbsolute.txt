@@ -1,0 +1,11 @@
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Core\bin\Debug\net8.0\UrbanFix.Core.deps.json
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Core\bin\Debug\net8.0\UrbanFix.Core.dll
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Core\bin\Debug\net8.0\UrbanFix.Core.pdb
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Core\obj\Debug\net8.0\UrbanFix.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Core\obj\Debug\net8.0\UrbanFix.Core.AssemblyInfoInputs.cache
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Core\obj\Debug\net8.0\UrbanFix.Core.AssemblyInfo.cs
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Core\obj\Debug\net8.0\UrbanFix.Core.csproj.CoreCompileInputs.cache
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Core\obj\Debug\net8.0\UrbanFix.Core.dll
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Core\obj\Debug\net8.0\refint\UrbanFix.Core.dll
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Core\obj\Debug\net8.0\UrbanFix.Core.pdb
+C:\Users\alves\Desktop\UrbanFix\UrbanFix\src\UrbanFix.Core\obj\Debug\net8.0\ref\UrbanFix.Core.dll
