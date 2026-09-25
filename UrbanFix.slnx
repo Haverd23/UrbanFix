@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/src/">
+    <Project Path="src/UrbanFix.Api/UrbanFix.Api/UrbanFix.Api.csproj" Id="372b85e3-d55e-4931-b742-9ed1b7764e72" />
     <Project Path="src/UrbanFix.Application/UrbanFix.Application.csproj" />
     <Project Path="src/UrbanFix.Data/UrbanFix.Data.csproj" />
     <Project Path="src/UrbanFix.Domain/UrbanFix.Domain.csproj" />
