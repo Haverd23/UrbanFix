@@ -1,1 +1,7 @@
-<Solution />
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/UrbanFix.Application/UrbanFix.Application.csproj" />
+    <Project Path="src/UrbanFix.Data/UrbanFix.Data.csproj" />
+    <Project Path="src/UrbanFix.Domain/UrbanFix.Domain.csproj" />
+  </Folder>
+</Solution>
