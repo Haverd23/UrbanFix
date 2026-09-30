@@ -8,6 +8,8 @@
         public string Bairro { get; private set; }
         public string Cidade { get; private set; }
         public string Estado { get; private set; }
+
+        protected Endereco() { }
         public Endereco(string cep, string numero, string logradouro, string bairro, string cidade, string estado)
         {
             ValidaEndereco(cep, numero, logradouro, bairro, cidade, estado);
