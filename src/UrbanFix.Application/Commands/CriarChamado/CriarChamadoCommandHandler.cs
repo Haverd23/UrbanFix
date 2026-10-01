@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using UrbanFix.Application.Interfaces;
 using UrbanFix.Domain;
+using UrbanFix.Domain.Enums;
 using UrbanFix.Domain.Models;
 
 namespace UrbanFix.Application.Commands.CriarChamado
@@ -18,9 +19,14 @@ namespace UrbanFix.Application.Commands.CriarChamado
             _cepService = cepService;
         }
 
-        public async Task HandleAsync(CriarChamadoCommand command)
+        public async Task<Guid> HandleAsync(CriarChamadoCommand command)
         {
-            var chamado = new Chamado(command.Tipo, command.Descricao);
+            if (!Enum.IsDefined(typeof(TipoDeProblema), command.Tipo))
+                throw new ArgumentException("Tipo de problema inválido.");
+
+            var tipo = (TipoDeProblema)command.Tipo;
+
+            var chamado = new Chamado(tipo, command.Descricao);
             var enderecoDTO = await _cepService.ObterEnderecoPorCEPAsync(command.CEP);
             var endereco = new Endereco(enderecoDTO.Cep, command.Numero,
                 enderecoDTO.Logradouro, enderecoDTO.Bairro, enderecoDTO.Cidade, enderecoDTO.Estado);
@@ -28,6 +34,7 @@ namespace UrbanFix.Application.Commands.CriarChamado
             chamado.DefinirEndereco(endereco);
 
             await _repository.CriarChamado(chamado);
+            return chamado.Id;
         }
 
     }
