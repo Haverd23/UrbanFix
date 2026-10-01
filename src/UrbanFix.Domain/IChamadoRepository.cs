@@ -6,5 +6,6 @@ namespace UrbanFix.Domain
     public interface IChamadoRepository
     {
         Task CriarChamado(Chamado chamado);
+        Task<IEnumerable<Chamado>> ListarChamados();
     }
 }
