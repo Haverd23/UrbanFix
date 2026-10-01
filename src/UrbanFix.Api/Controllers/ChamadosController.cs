@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using UrbanFix.Api.Request;
 using UrbanFix.Application.Commands.CriarChamado;
+using UrbanFix.Application.DTOs;
+using UrbanFix.Application.Queries.ListarChamados;
 
 namespace UrbanFix.Api.Controllers
 {
@@ -10,10 +12,12 @@ namespace UrbanFix.Api.Controllers
     public class ChamadosController : ControllerBase
     {
         private readonly CriarChamadoCommandHandler _handler;
+        private readonly ListarChamadosQueryHandler _queryHandler;
 
-        public ChamadosController(CriarChamadoCommandHandler handler)
+        public ChamadosController(CriarChamadoCommandHandler handler, ListarChamadosQueryHandler queryHandler)
         {
             _handler = handler;
+            _queryHandler = queryHandler;
         }
 
         [HttpPost]
@@ -23,6 +27,11 @@ namespace UrbanFix.Api.Controllers
             var resultado = await _handler.HandleAsync(chamado);
 
             return Created("",resultado);
+        }
+        [HttpGet]
+        public async Task<IActionResult> ListarChamados()
+        {
+            return Ok( await _queryHandler.HandleAsync());
         }
     }
 }

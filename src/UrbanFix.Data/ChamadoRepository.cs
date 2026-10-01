@@ -1,4 +1,5 @@
-﻿using UrbanFix.Domain;
+﻿using Microsoft.EntityFrameworkCore;
+using UrbanFix.Domain;
 using UrbanFix.Domain.Models;
 
 namespace UrbanFix.Data
@@ -16,6 +17,11 @@ namespace UrbanFix.Data
         {
             await _context.AddAsync(chamado);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<IEnumerable<Chamado>> ListarChamados()
+        {
+            return await _context.Chamados.ToListAsync();
         }
     }
 }
