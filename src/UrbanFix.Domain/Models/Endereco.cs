@@ -1,4 +1,6 @@
-﻿namespace UrbanFix.Domain.Models
+﻿using UrbanFix.Core.Domain;
+
+namespace UrbanFix.Domain.Models
 {
     public class Endereco
     {
@@ -23,22 +25,22 @@
         private void ValidaEndereco(string cep, string numero,string logradouro, string bairro, string cidade, string estado)
         {
             if (string.IsNullOrWhiteSpace(cep))
-                throw new Exception("CEP não pode ser vazio.");
+                throw new DomainException("CEP não pode ser vazio.");
 
             if (string.IsNullOrWhiteSpace(numero))
-                throw new Exception("Numero não pode ser vazio.");
+                throw new DomainException("Numero não pode ser vazio.");
 
             if (string.IsNullOrWhiteSpace(logradouro))
-                throw new Exception("Logradouro não pode ser vazio.");
+                throw new DomainException("Logradouro não pode ser vazio.");
 
             if (string.IsNullOrWhiteSpace(bairro))
-                throw new Exception("Bairro não pode ser vazio.");
+                throw new DomainException("Bairro não pode ser vazio.");
 
             if (string.IsNullOrWhiteSpace(cidade))
-                throw new Exception("Cidade não pode ser vazia.");
+                throw new DomainException("Cidade não pode ser vazia.");
 
             if (string.IsNullOrWhiteSpace(estado))
-                throw new Exception("Estado não pode ser vazio.");
+                throw new DomainException("Estado não pode ser vazio.");
         }
 
 

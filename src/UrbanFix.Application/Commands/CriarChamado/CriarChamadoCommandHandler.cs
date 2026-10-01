@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using UrbanFix.Application.Interfaces;
+using UrbanFix.Core.Domain;
 using UrbanFix.Domain;
 using UrbanFix.Domain.Enums;
 using UrbanFix.Domain.Models;
@@ -22,7 +23,7 @@ namespace UrbanFix.Application.Commands.CriarChamado
         public async Task<Guid> HandleAsync(CriarChamadoCommand command)
         {
             if (!Enum.IsDefined(typeof(TipoDeProblema), command.Tipo))
-                throw new ArgumentException("Tipo de problema inválido.");
+                throw new DomainException("Tipo de problema inválido.");
 
             var tipo = (TipoDeProblema)command.Tipo;
 

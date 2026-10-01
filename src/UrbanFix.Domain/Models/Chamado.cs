@@ -1,4 +1,5 @@
-﻿using UrbanFix.Domain.Enums;
+﻿using UrbanFix.Core.Domain;
+using UrbanFix.Domain.Enums;
 namespace UrbanFix.Domain.Models
 {
     public class Chamado
@@ -28,12 +29,12 @@ namespace UrbanFix.Domain.Models
         {
             if (string.IsNullOrEmpty(descricao) || descricao.Trim().Length < 10)
             {
-                throw new Exception("A descrição deve conter no mínimo 10 caracteres");
+                throw new DomainException("A descrição deve conter no mínimo 10 caracteres");
             }
             if (!Enum.IsDefined(typeof(TipoDeProblema), tipo))
             {
                 var tiposValidos = string.Join(", ", Enum.GetNames(typeof(TipoDeProblema)));
-                throw new Exception($"Tipo de problema inválido. Tipos válidos: {tiposValidos}");
+                throw new DomainException($"Tipo de problema inválido. Tipos válidos: {tiposValidos}");
             }
         }
 
