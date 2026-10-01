@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UrbanFix.Core\UrbanFix.Core.csproj" />
+  </ItemGroup>
+
 </Project>
