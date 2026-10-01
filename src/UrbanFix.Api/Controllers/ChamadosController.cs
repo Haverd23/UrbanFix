@@ -4,6 +4,7 @@ using UrbanFix.Api.Request;
 using UrbanFix.Application.Commands.CriarChamado;
 using UrbanFix.Application.DTOs;
 using UrbanFix.Application.Queries.ListarChamados;
+using UrbanFix.Core.Web.ApiResponse;
 
 namespace UrbanFix.Api.Controllers
 {
@@ -26,12 +27,13 @@ namespace UrbanFix.Api.Controllers
             var chamado = new CriarChamadoCommand(request.Tipo, request.Descricao, request.CEP, request.Numero);
             var resultado = await _handler.HandleAsync(chamado);
 
-            return Created("",resultado);
+            return Created("",ApiResponse<Guid>.OK(resultado));
         }
         [HttpGet]
         public async Task<IActionResult> ListarChamados()
         {
-            return Ok( await _queryHandler.HandleAsync());
+            var dados = await _queryHandler.HandleAsync();
+            return Ok(ApiResponse<IEnumerable<ChamadoDTO>>.OK(dados));
         }
     }
 }
