@@ -5,5 +5,5 @@ using UrbanFix.Domain.Enums;
 
 namespace UrbanFix.Application.Commands.CriarChamado
 {
-    public record CriarChamadoCommand(TipoDeProblema Tipo,string Descricao,string CEP,string Numero);
+    public record CriarChamadoCommand(int Tipo,string Descricao,string CEP,string Numero);
 }
