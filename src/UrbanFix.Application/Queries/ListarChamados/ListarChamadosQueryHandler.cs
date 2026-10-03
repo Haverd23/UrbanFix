@@ -1,10 +1,11 @@
 ﻿using UrbanFix.Application.Commands.CriarChamado;
 using UrbanFix.Application.DTOs;
+using UrbanFix.Core.Mediator;
 using UrbanFix.Domain;
 
 namespace UrbanFix.Application.Queries.ListarChamados
 {
-    public class ListarChamadosQueryHandler
+    public class ListarChamadosQueryHandler : IRequestHandler<ListarChamadosQuery,IEnumerable<ChamadoDTO>>
     {
         private readonly IChamadoRepository _repository;
 
@@ -13,7 +14,7 @@ namespace UrbanFix.Application.Queries.ListarChamados
             _repository = repository;
         }
 
-        public async Task<IEnumerable<ChamadoDTO>> HandleAsync()
+        public async Task<IEnumerable<ChamadoDTO>> HandleAsync(ListarChamadosQuery query)
         {
             var chamados = await _repository.ListarChamados();
 
