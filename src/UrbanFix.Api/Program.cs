@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using UrbanFix.Api.Extensions;
 using UrbanFix.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,8 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddDbContext<ChamadoContext>(options => options.
-UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDependencyInjection(builder.Configuration);
 
 var app = builder.Build();
 
