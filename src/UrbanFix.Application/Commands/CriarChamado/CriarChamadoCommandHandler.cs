@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 using UrbanFix.Application.Interfaces;
 using UrbanFix.Core.Domain;
+using UrbanFix.Core.Mediator;
 using UrbanFix.Domain;
 using UrbanFix.Domain.Enums;
 using UrbanFix.Domain.Models;
 
 namespace UrbanFix.Application.Commands.CriarChamado
 {
-    public class CriarChamadoCommandHandler
+    public class CriarChamadoCommandHandler : IRequestHandler<CriarChamadoCommand,Guid>
     {
         private readonly IChamadoRepository _repository;
         private readonly ICepService _cepService;
