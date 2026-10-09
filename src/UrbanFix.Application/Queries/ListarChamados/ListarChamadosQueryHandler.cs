@@ -1,40 +1,24 @@
-﻿using UrbanFix.Application.Commands.CriarChamado;
-using UrbanFix.Application.DTOs;
+﻿using UrbanFix.Application.DTOs;
+using UrbanFix.Application.Repository;
 using UrbanFix.Core.Mediator;
+using UrbanFix.Core.Pagination;
 using UrbanFix.Domain;
 
 namespace UrbanFix.Application.Queries.ListarChamados
 {
-    public class ListarChamadosQueryHandler : IRequestHandler<ListarChamadosQuery,IEnumerable<ChamadoDTO>>
+    public class ListarChamadosQueryHandler : IRequestHandler<ListarChamadosQuery,PagedResult<ChamadoDTO>>
     {
-        private readonly IChamadoRepository _repository;
+        private readonly IChamadoQueryRepository _repository;
 
-        public ListarChamadosQueryHandler(IChamadoRepository repository)
+        public ListarChamadosQueryHandler(IChamadoQueryRepository repository)
         {
             _repository = repository;
         }
 
-        public async Task<IEnumerable<ChamadoDTO>> HandleAsync(ListarChamadosQuery query)
+        public async Task<PagedResult<ChamadoDTO>> HandleAsync(ListarChamadosQuery query)
         {
-            var chamados = await _repository.ListarChamados();
-
-            return chamados.Select(chamado => new ChamadoDTO
-            {
-                Id = chamado.Id,
-                Tipo = chamado.Tipo.ToString(),
-                Descricao = chamado.Descricao,
-                DataCriacao = chamado.DataCriacao,
-                Status = chamado.Status.ToString(),
-                Cep = chamado.Endereco.CEP,
-                Numero = chamado.Endereco.Numero,
-                Logradouro = chamado.Endereco.Logradouro,
-                Bairro = chamado.Endereco.Bairro,
-                Cidade = chamado.Endereco.Cidade,
-                Estado = chamado.Endereco.Estado
-            });
+            var chamados = await _repository.ListarAsync(query.Filtro);
+            return chamados;           
         }
-
-
-
     }
 }
