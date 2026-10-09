@@ -5,6 +5,7 @@ using UrbanFix.Application.Commands.CriarChamado;
 using UrbanFix.Application.DTOs;
 using UrbanFix.Application.Queries.ListarChamados;
 using UrbanFix.Core.Mediator;
+using UrbanFix.Core.Pagination;
 using UrbanFix.Core.Web.ApiResponse;
 
 namespace UrbanFix.Api.Controllers
@@ -29,11 +30,21 @@ namespace UrbanFix.Api.Controllers
             return Created("",ApiResponse<Guid>.OK(resultado));
         }
         [HttpGet]
-        public async Task<IActionResult> ListarChamados()
+        public async Task<IActionResult> ListarChamados([FromQuery]ListarChamadosRequest request)
         {
-            var query = new ListarChamadosQuery();
-            var dados = await _mediator.SendAsync<ListarChamadosQuery,IEnumerable<ChamadoDTO>>(query);
-            return Ok(ApiResponse<IEnumerable<ChamadoDTO>>.OK(dados));
+            var filtro = new ChamadoFiltroDTO
+            {
+                Tipo = request.Tipo,
+                Bairro = request.Bairro,
+                Status = request.Status,
+                OrderBy = request.OrderBy,
+                OrderDirection = request.OrderDirection,
+                Page = request.Page,
+                PageSize = request.PageSize
+            };
+            var query = new ListarChamadosQuery(filtro);
+            var dados = await _mediator.SendAsync<ListarChamadosQuery,PagedResult<ChamadoDTO>>(query);
+            return Ok(ApiResponse<PagedResult<ChamadoDTO>>.OK(dados));
         }
     }
 }

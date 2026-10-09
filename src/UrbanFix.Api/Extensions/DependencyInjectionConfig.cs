@@ -3,9 +3,12 @@ using UrbanFix.Application.Commands.CriarChamado;
 using UrbanFix.Application.DTOs;
 using UrbanFix.Application.Interfaces;
 using UrbanFix.Application.Queries.ListarChamados;
+using UrbanFix.Application.Repository;
 using UrbanFix.Core.Mediator;
+using UrbanFix.Core.Pagination;
 using UrbanFix.Data;
 using UrbanFix.Data.Mediator;
+using UrbanFix.Data.Queries;
 using UrbanFix.Domain;
 
 namespace UrbanFix.Api.Extensions
@@ -19,7 +22,8 @@ namespace UrbanFix.Api.Extensions
             services.AddDbContext<ChamadoContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IMediator, MediatorDispatcher>();
 
-            services.AddScoped<IRequestHandler<ListarChamadosQuery, IEnumerable<ChamadoDTO>>,ListarChamadosQueryHandler>();
+            services.AddScoped<IChamadoQueryRepository, ChamadoQueryRepository>();
+            services.AddScoped<IRequestHandler<ListarChamadosQuery, PagedResult<ChamadoDTO>>,ListarChamadosQueryHandler>();
             services.AddScoped<IRequestHandler<CriarChamadoCommand, Guid>,CriarChamadoCommandHandler>();
             services.AddScoped<IChamadoRepository, ChamadoRepository>();
             services.AddHttpClient<ICepService, CepService>();
