@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using UrbanFix.Application.Commands.CriarChamado;
+using UrbanFix.Application.Commands.FinalizarChamado;
 using UrbanFix.Application.DTOs;
 using UrbanFix.Application.Interfaces;
 using UrbanFix.Application.Queries.ListarChamados;
@@ -26,6 +27,7 @@ namespace UrbanFix.Api.Extensions
             services.AddScoped<IChamadoQueryRepository, ChamadoQueryRepository>();
             services.AddScoped<IRequestHandler<ListarChamadosQuery, PagedResult<ChamadoDTO>>,ListarChamadosQueryHandler>();
             services.AddScoped<IRequestHandler<CriarChamadoCommand, Guid>,CriarChamadoCommandHandler>();
+            services.AddScoped<IRequestHandler<FinalizarChamadoCommand, Guid>, FinalizarChamadoCommandHandler>();
             services.AddScoped<IChamadoRepository, ChamadoRepository>();
             services.AddHttpClient<ICepService, CepService>();
 
