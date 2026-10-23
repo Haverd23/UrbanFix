@@ -25,6 +25,10 @@ namespace UrbanFix.Domain.Models
         {
             Endereco = endereco;
         }
+        public void FinalizarChamado()
+        {
+            Status = TipoDeStatus.Finalizado;
+        }
         private void Validacoes(string descricao,TipoDeProblema tipo)
         {
             if (string.IsNullOrEmpty(descricao) || descricao.Trim().Length < 10)

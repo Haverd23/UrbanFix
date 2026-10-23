@@ -19,6 +19,15 @@ namespace UrbanFix.Data
             await _context.SaveChangesAsync();
         }
 
+        public async Task FinalizarChamado()
+        {
+            await _context.SaveChangesAsync();
+        }
+        public async Task<Chamado?> ObterPorId(Guid id)
+        {
+           return await _context.Chamados.FirstOrDefaultAsync(c => c.Id == id);
+        }
+
         public async Task<IEnumerable<Chamado>> ListarChamados()
         {
             return await _context.Chamados.ToListAsync();

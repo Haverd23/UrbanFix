@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using UrbanFix.Api.Request;
 using UrbanFix.Application.Commands.CriarChamado;
+using UrbanFix.Application.Commands.FinalizarChamado;
 using UrbanFix.Application.DTOs;
 using UrbanFix.Application.Queries.ListarChamados;
 using UrbanFix.Core.Mediator;
@@ -28,6 +29,16 @@ namespace UrbanFix.Api.Controllers
             var resultado = await _mediator.SendAsync<CriarChamadoCommand, Guid>(chamado);
 
             return Created("",ApiResponse<Guid>.OK(resultado));
+        }
+        [HttpPut("{id:guid}")]
+        public async Task<IActionResult> FinalizarChamado([FromRoute] FinalizarChamadoRequest request)
+        {
+            var command = new FinalizarChamadoCommand(request.Id);
+
+            var resultado = await _mediator
+                .SendAsync<FinalizarChamadoCommand, Guid>(command);
+
+            return Ok(ApiResponse<Guid>.OK(resultado));
         }
         [HttpGet]
         public async Task<IActionResult> ListarChamados([FromQuery]ListarChamadosRequest request)
