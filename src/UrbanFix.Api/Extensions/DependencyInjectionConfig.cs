@@ -4,6 +4,7 @@ using UrbanFix.Application.DTOs;
 using UrbanFix.Application.Interfaces;
 using UrbanFix.Application.Queries.ListarChamados;
 using UrbanFix.Application.Repository;
+using UrbanFix.Core.Cache;
 using UrbanFix.Core.Mediator;
 using UrbanFix.Core.Pagination;
 using UrbanFix.Data;
@@ -27,6 +28,12 @@ namespace UrbanFix.Api.Extensions
             services.AddScoped<IRequestHandler<CriarChamadoCommand, Guid>,CriarChamadoCommandHandler>();
             services.AddScoped<IChamadoRepository, ChamadoRepository>();
             services.AddHttpClient<ICepService, CepService>();
+
+            services.AddStackExchangeRedisCache(options =>
+            {
+                options.Configuration = configuration.GetConnectionString("Redis");
+            });
+            services.AddScoped<ICacheService, CacheService>();
 
             return services;
         }

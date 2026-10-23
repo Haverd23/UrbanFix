@@ -6,7 +6,8 @@ services:
         condition: service_completed_successfully
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=${DEFAULT_CONNECTION}    
+      - ConnectionStrings__DefaultConnection=${DEFAULT_CONNECTION}   
+      - ConnectionStrings__Redis=${REDIS_CONNECTION} 
     ports:
       - "8080:8080"
     networks:
@@ -44,13 +45,21 @@ services:
       - ConnectionStrings__DefaultConnection=${DEFAULT_CONNECTION}
     networks:
       - urbanfix-network        
-
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis_data:/data
+    networks:
+      - urbanfix-network
 networks:
     urbanfix-network:
       driver: bridge
 
 volumes:
   mssql_data:
+  redis_data:
     
     
       
